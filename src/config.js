@@ -41,6 +41,6 @@ export default {
   errorImg: '/images/error.gif',
   // Twikoo 评论配置
   twikoo: {
-    src: '//source.kemiaofx.top/twikoo/twikoo.all.min.js',
+    src: 'https://source.kemeow.cn/twikoo/twikoo.all.min.js',
   },
 }
