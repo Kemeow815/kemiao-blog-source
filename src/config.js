@@ -7,8 +7,8 @@
 export default {
   // 博客基础配置
   title: '克喵的部落格',
-  subtitle: '致力于分享资源和生活~',
-  description: 'KeMiao\'s blog',
+  subtitle: 'KeMiao\'s blog',
+  description: '致力于分享资源和生活~',
   keywords: 'app, blog, resources, life, web',
   logo: './logo.svg',
   favicon16: './favicon.ico',
