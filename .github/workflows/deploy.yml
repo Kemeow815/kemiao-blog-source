@@ -44,16 +44,16 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: wallleap/wallleap.github.io
-          publish_branch: master
-          user_name: wallleap
-          user_email: 15579576761@163.com
+          external_repository: Kemeow815/Kemeow815.github.io
+          publish_branch: main
+          user_name: Kemeow815
+          user_email: kemiao@kmblog.icu
           commit_message: ${{ github.event.head_commit.message }}
           full_commit_message: ${{ github.event.head_commit.message }}
           publish_dir: ./dist
           force_orphan: true
           allow_empty_commit: true
-          cname: myblog.wallleap.cn
+          cname: myblog.kemeow.cn
       - name: Get the output
         run: |
           echo "${{ steps.deploy.outputs.notify }}"

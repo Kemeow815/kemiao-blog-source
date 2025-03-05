@@ -6,34 +6,34 @@
 
 export default {
   // 博客基础配置
-  title: 'wallleap',
-  subtitle: 'ルー・ワン',
-  description: 'Luwang\'s blog',
-  keywords: 'Luwang, blog, wallleap',
+  title: '克喵的部落格',
+  subtitle: '致力于分享资源和生活~',
+  description: 'KeMiao\'s blog',
+  keywords: 'app, blog, resources, life, web',
   logo: './logo.svg',
   favicon16: './favicon.ico',
   favicon32: './favicon.ico',
-  createdTime: '2019-08-01',
-  icp: '赣ICP备20000895号-1',
+  createdTime: '2025-03-05',
+  icp: '赣ICP备2025458895号-1',
   icpLink: '//beian.miit.gov.cn/',
   beian: '',
   beianLink: '',
   // 关于页二维码
-  alipay_qr: '/images/alipayQr.jpg',
+  alipay_qr: 'https://cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98.jpg',
   // GitHub Issues 配置
-  username: 'wallleap',
-  repository: 'myblogs',
-  // friendsRepo: 'friends', // 留空则默认使用上方仓库获取
+  username: 'Kemeow815',
+  repository: 'kemiao-blog',
+  friendsRepo: 'kemiao-blog-friends', // 留空则默认使用上方仓库获取
   // 您的信息
-  author: 'Luwang',
-  email: 'luwang@oicode.cn',
+  author: '克喵爱吃卤面',
+  email: 'kemiao@kmblog.icu',
   link: '//luwang.info',
-  github: '//github.com/wallleap',
+  github: '//github.com/Kemeow815',
   // 友链信息
-  name: 'wallleap',
-  url: '//myblog.wallleap.cn',
-  avatar: '//gravatar.wallleap.cn/avatar/be1ccdcf025a92b98a92e331e1b3662a?size=256',
-  desc: 'Luwang\'s blog',
+  name: '克喵爱吃卤面',
+  url: '//myblog.kemeow.cn',
+  avatar: '//cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/kemeow815@avatar.png',
+  desc: '致力于分享资源和生活~',
   // 文章相关
   pageSize: 12,
   defaultCover: '/images/cover.jpg',
@@ -41,6 +41,6 @@ export default {
   errorImg: '/images/error.gif',
   // Twikoo 评论配置
   twikoo: {
-    src: '//cdn.staticfile.org/twikoo/1.6.22/twikoo.all.min.js',
+    src: '//source.kemiaofx.top/twikoo/twikoo.all.min.js',
   },
 }
