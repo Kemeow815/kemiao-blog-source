@@ -35,7 +35,7 @@ export default {
   avatar: '//cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/kemeow815@avatar.png',
   desc: '致力于分享资源和生活~',
   // 文章相关
-  pageSize: 14,
+  pageSize: 12,
   defaultCover: '/images/cover.jpg',
   // 图片加载失败时显示，请将图片下载至你自己的存储空间，并使用自己的 CDN 引入
   errorImg: '/images/error.gif',
