@@ -28,7 +28,7 @@ jobs:
 
       - name: create env file
         run: |
-          touch .env
+          touch .env.local
           echo VITE_GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} >> .env
           echo VITE_TWIKOO_ID: ${{ secrets.VITE_TWIKOO_ID }} >> .env
           echo VITE_LEANCLOUD_ID: ${{ secrets.VITE_LEANCLOUD_ID }} >> .env
