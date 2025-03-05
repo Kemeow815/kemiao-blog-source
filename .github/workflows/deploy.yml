@@ -26,17 +26,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Create .env file
+      - name: create env file
         run: |
-          {
-            echo "VITE_GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}";
-            echo "VITE_TWIKOO_ID=${{ secrets.VITE_TWIKOO_ID }}";
-            echo "VITE_LEANCLOUD_ID=${{ secrets.VITE_LEANCLOUD_ID }}";
-            echo "VITE_LEANCLOUD_KEY=${{ secrets.VITE_LEANCLOUD_KEY }}";
-            echo "VITE_LEANCLOUD_SERVER=${{ secrets.VITE_LEANCLOUD_SERVER }}";
-            echo "VITE_CLARITY_ID=${{ secrets.VITE_CLARITY_ID }}";
-            echo "VITE_UTTERANCES_CODE=${{ secrets.VITE_UTTERANCES_CODE }}";
-          } > .env                # 使用重定向一次性写入，避免多次追加
+          touch .env
+          echo VITE_GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} >> .env
+          echo VITE_TWIKOO_ID: ${{ secrets.VITE_TWIKOO_ID }} >> .env
+          echo VITE_LEANCLOUD_ID: ${{ secrets.VITE_LEANCLOUD_ID }} >> .env
+          echo VITE_LEANCLOUD_KEY: ${{ secrets.VITE_LEANCLOUD_KEY }} >> .env
+          echo VITE_LEANCLOUD_SERVER: ${{ secrets.VITE_LEANCLOUD_SERVER }} >> .env
+          echo VITE_CLARITY_ID: ${{ secrets.VITE_CLARITY_ID }} >> .env
+          echo VITE_UTTERANCES_CODE: ${{ secrets.VITE_UTTERANCES_CODE }} >> .env
       
       - name: Build
         run: pnpm run build
