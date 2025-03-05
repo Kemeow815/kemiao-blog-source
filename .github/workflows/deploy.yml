@@ -13,47 +13,43 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3  # 升级到 v3
 
       - uses: pnpm/action-setup@v2
         with:
           version: 8
+
       - uses: actions/setup-node@v3
         with:
-          node-version: 23
+          node-version: 18         # 推荐使用 LTS 版本
           cache: 'pnpm'
 
       - name: Install dependencies
         run: pnpm install
 
-      - name: create env file
+      - name: Create .env file
         run: |
-          touch .env
-          echo VITE_GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }} >> .env
-          echo VITE_TWIKOO_ID: ${{ secrets.VITE_TWIKOO_ID }} >> .env
-          echo VITE_LEANCLOUD_ID: ${{ secrets.VITE_LEANCLOUD_ID }} >> .env
-          echo VITE_LEANCLOUD_KEY: ${{ secrets.VITE_LEANCLOUD_KEY }} >> .env
-          echo VITE_LEANCLOUD_SERVER: ${{ secrets.VITE_LEANCLOUD_SERVER }} >> .env
-          echo VITE_CLARITY_ID: ${{ secrets.VITE_CLARITY_ID }} >> .env
-          echo VITE_UTTERANCES_CODE: ${{ secrets.VITE_UTTERANCES_CODE }} >> .env
-      
+          {
+            echo "VITE_GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}";
+            echo "VITE_TWIKOO_ID=${{ secrets.VITE_TWIKOO_ID }}";
+            echo "VITE_LEANCLOUD_ID=${{ secrets.VITE_LEANCLOUD_ID }}";
+            echo "VITE_LEANCLOUD_KEY=${{ secrets.VITE_LEANCLOUD_KEY }}";
+            echo "VITE_LEANCLOUD_SERVER=${{ secrets.VITE_LEANCLOUD_SERVER }}";
+            echo "VITE_CLARITY_ID=${{ secrets.VITE_CLARITY_ID }}";
+            echo "VITE_UTTERANCES_CODE=${{ secrets.VITE_UTTERANCES_CODE }}";
+          } > .env                # 使用重定向一次性写入，避免多次追加
+
       - name: Build
         run: pnpm run build
 
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # 默认使用内置 Token
           external_repository: Kemeow815/Kemeow815.github.io
           publish_branch: main
-          user_name: Kemeow815
-          user_email: kemiao@kmblog.icu
-          commit_message: ${{ github.event.head_commit.message }}
-          full_commit_message: ${{ github.event.head_commit.message }}
           publish_dir: ./dist
-          force_orphan: true
-          allow_empty_commit: true
           cname: myblog.kemeow.cn
-      - name: Get the output
-        run: |
-          echo "${{ steps.deploy.outputs.notify }}"
+          commit_message: "Deploy: ${{ github.sha }}"
+
+      # 移除冗余的输出步骤（通常不需要）
