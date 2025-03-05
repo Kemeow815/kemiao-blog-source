@@ -14,7 +14,7 @@ export default {
   favicon16: './favicon.ico',
   favicon32: './favicon.ico',
   createdTime: '2025-03-05',
-  icp: '赣ICP备2025458895号-1',
+  icp: '赣ICP备202545895号-1',
   icpLink: '//beian.miit.gov.cn/',
   beian: '',
   beianLink: '',
