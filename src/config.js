@@ -31,7 +31,7 @@ export default {
   github: '//github.com/Kemeow815',
   // 友链信息
   name: '克喵爱吃卤面',
-  url: '//myblog.kemeow.cn',
+  url: '//myblog.kemeow.top',
   avatar: '//cdn.jsdelivr.net/gh/kmfx/tuchuang@main/img/kemeow815@avatar.png',
   desc: '致力于分享资源和生活~',
   // 文章相关
