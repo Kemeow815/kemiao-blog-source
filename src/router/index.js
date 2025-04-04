@@ -61,20 +61,20 @@ const routes = [
       title: '友链',
     },
   },
-  {
-    path: 'https://music.kemiao.online/',
-    name: 'Music',
-    meta: {
-      index: 4,
-      title: '音乐',
-    },
-  },
+  // {
+  //   path: 'https://music.kemiao.online/',
+  //   name: 'Music',
+  //   meta: {
+  //     index: 4,
+  //     title: '音乐',
+  //   },
+  // },
   {
     path: '/about',
     name: 'About',
     component: () => import('@/views/about/index.vue'),
     meta: {
-      index: 5,
+      index: 4,
       title: '关于',
     },
   },
