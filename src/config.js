@@ -11,8 +11,8 @@ export default {
   description: '致力于分享资源和生活~',
   keywords: 'app, blog, resources, life, web',
   logo: './logo.svg',
-  favicon16: './favicon.ico',
-  favicon32: './favicon.ico',
+  favicon16: './favicon16.ico',
+  favicon32: './favicon32.ico',
   createdTime: '2025-03-05',
   icp: '赣ICP备202545895号-15',
   icpLink: '//beian.miit.gov.cn/',
@@ -27,7 +27,7 @@ export default {
   // 您的信息
   author: '克喵爱吃卤面',
   email: 'kemiao@kmblog.icu',
-  link: '//luwang.info',
+  link: '//myblog.kemeow.top',
   github: '//github.com/Kemeow815',
   // 友链信息
   name: '克喵爱吃卤面',
