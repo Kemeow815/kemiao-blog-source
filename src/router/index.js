@@ -62,11 +62,11 @@ const routes = [
     },
   },
   // {
-  //   path: 'https://music.kemiao.online/',
-  //   name: 'Music',
+  //   path: '/留言',
+  //   name: 'message',
   //   meta: {
   //     index: 4,
-  //     title: '音乐',
+  //     title: '留言',
   //   },
   // },
   {

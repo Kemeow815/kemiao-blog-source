@@ -3,6 +3,7 @@ export default {
   archives: 'Archives',
   inspiration: 'Inspiration',
   friends: 'Friends',
+  // Music: 'Music',
   about: 'About',
   enter_search: 'Enter keywords to search...',
   search: 'Search',

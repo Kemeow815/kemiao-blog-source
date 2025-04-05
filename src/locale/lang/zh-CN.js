@@ -3,6 +3,7 @@ export default {
   archives: '归档',
   inspiration: '灵感',
   friends: '友链',
+  // music: '音乐',
   about: '关于',
   enter_search: '输入关键词进行搜索',
   search: '搜索',

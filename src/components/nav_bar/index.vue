@@ -8,7 +8,7 @@ export default {
         { id: 1, title: this.$t('archives'), path: '/archives', icon: 'archives' },
         { id: 2, title: this.$t('inspiration'), path: '/inspiration', icon: 'inspire' },
         { id: 3, title: this.$t('friends'), path: '/friend', icon: 'friends' },
-        // { id: 4, title: this.$t('音乐'), path: 'https://music.kemiao.online', icon: 'music' },
+        // { id: 4, title: this.$t('留言'), path: '/message', icon: 'music' },
         { id: 4, title: this.$t('about'), path: '/about', icon: 'about' },
       ],
       routerChanged: true,
